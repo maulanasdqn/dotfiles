@@ -1,5 +1,5 @@
 order = ["battery", "backlight", "audio" ,"time"]
-separator = " / "
+separator = " < "
 
 [audio]
 mute = "ﱝ"

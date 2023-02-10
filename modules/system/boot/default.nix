@@ -4,7 +4,7 @@
   boot = {
     supportedFilesystems = [ "ntfs" ];
     loader = {
-      timeout = 0;
+      timeout = 2;
       systemd-boot = {
         enable = true;
       };

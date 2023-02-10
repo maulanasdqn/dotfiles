@@ -9,7 +9,7 @@
     oh-my-zsh = {
       enable = true;
       plugins = [ "git" ];
-      theme = "gentoo";
+      theme = "intheloop";
     };
     initExtra = ''
       export PATH=~/.npm-packages/bin:$PATH
