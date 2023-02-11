@@ -34,6 +34,7 @@
           config = ''
             luafile ~/.config/dotfiles/modules/users/nvim/lua/config/lualine.lua
           '';
+
         }
 
         {

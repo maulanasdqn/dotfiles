@@ -16,7 +16,7 @@
         })
 
       ];
-      configFile = writeText "config.def.h" (builtins.readFile ./config/config.def.h);
+      configFile = writeText "config.h" (builtins.readFile ./config/config.h);
       postPatch = "${oldAttrs.postPatch}\n cp ${configFile} ./config.def.h";
     }))
   ];
