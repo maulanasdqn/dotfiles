@@ -1,4 +1,5 @@
 {config, pkgs, ...}:
+
 {
   programs.light.enable = true;
   
@@ -22,20 +23,6 @@
    nixpkgs.config.permittedInsecurePackages = [
      "xen-4.10.4"
    ];
-            
-  
-  nix = {
-    package = pkgs.nixFlakes;
-    settings = {
-      substituters = [
-        "https://cache.nixos.org/"
-        "https://cache.komunix.org/"
-      ];
-    };
-    extraOptions = ''
-      experimental-features = nix-command flakes
-    '';
-  };
   
   security.sudo.wheelNeedsPassword = false;
   

@@ -3,6 +3,8 @@
 
   imports = [ 
     ./boot
+    ./xdg
+    ./config
     ./xserver
     ./audio
     ./environtment
