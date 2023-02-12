@@ -13,7 +13,7 @@ with services;
        #gdm.enable = true;
        #sddm.enable = true;
        #lightdm.enable = true;
-       #startx.enable = true;
+       startx.enable = true;
       };
       desktopManager = {
         #xfce.enable = true;

@@ -20,6 +20,10 @@ with builtins;
       hyprland.nixosModules.default
       {
         imports = [ ../../modules/system ] ++ sys_users;
+
+        xdg-desktop-portal-hyprland = inputs.xdph.packages.${prev.system}.default.override {
+          hyprland-share-picker = inputs.xdph.packages.${prev.system}.hyprland-share-picker.override {inherit hyprland;};
+        };
        
         environment.etc = {
           "hmsystemdata.json".text = toJSON userCfg;

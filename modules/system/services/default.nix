@@ -3,6 +3,7 @@
 {
   imports = [
     ./actkbd
+    ./greetd
     ./common
     ./dwm-status
     ./gnome

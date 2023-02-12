@@ -3,7 +3,7 @@
 {
   environment.variables = {
     PATH="$HOME/.npm-packages/bin:$PATH";
-    NIXOS_CONFIG_DIR = "$HOME/.config/dotfiles/";
+    NIXOS_CONFIG_DIR = "$HOME/.config/dotfiles";
     XDG_DATA_HOME = "$HOME/.local/share";
     PASSWORD_STORE_DIR = "$HOME/.local/share/password-store";
     GTK_RC_FILES = "$HOME/.local/share/gtk-1.0/gtkrc";
