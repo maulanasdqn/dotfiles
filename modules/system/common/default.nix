@@ -1,4 +1,4 @@
-{config, pkgs, ...}:
+{ config, pkgs, ...}:
 
 {
   programs.light.enable = true;
@@ -23,8 +23,6 @@
    nixpkgs.config.permittedInsecurePackages = [
      "xen-4.10.4"
    ];
-  
-  security.sudo.wheelNeedsPassword = false;
   
   programs = {
     mtr = {

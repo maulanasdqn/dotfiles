@@ -13,6 +13,7 @@
     ./virtual
     ./common
     ./shell
+    ./security
   ];
  
 }
