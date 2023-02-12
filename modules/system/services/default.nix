@@ -7,7 +7,7 @@
     };
     dwm-status = {
       enable = true;
-      order = [ "audio" "backlight" "battery" "cpu_load" "network" "time" ];
+      order = ["battery" "backlight" "audio" "time"];
     };
     mpd = {
       enable = true;
@@ -17,10 +17,11 @@
           name "My PipeWire Output"
         }
       '';
-      network.listenAddress = "any"; # if you want to allow non-localhost connections
-      startWhenNeeded = true; # systemd feature: only start MPD service upon connection to its socket
+      network.listenAddress = "any";
+      startWhenNeeded = true; #
     };
     openssh.enable = true;
+    blueman.enable = true;
     udisks2.enable = true;
     devmon.enable = true;
     printing.enable = true;

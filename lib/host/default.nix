@@ -1,4 +1,4 @@
-{ system, pkgs, home-manager, lib, user, ... }:
+{ system, pkgs, home-manager, lib, user, hyprland, ... }:
 with builtins;
 {
   mkHost = { name, initrdMods, kernelMods, kernelPackage,
@@ -17,12 +17,13 @@ with builtins;
     inherit system;
 
     modules = [
+      hyprland.nixosModules.default
       {
-         imports = [ ../../modules/system ] ++ sys_users;
+        imports = [ ../../modules/system ] ++ sys_users;
        
-         environment.etc = {
-           "hmsystemdata.json".text = toJSON userCfg;
-         };
+        environment.etc = {
+          "hmsystemdata.json".text = toJSON userCfg;
+        };
        
         networking = { 
           hostName = "${name}";

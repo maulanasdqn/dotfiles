@@ -4,14 +4,14 @@
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-unstable";
     devenv.url = "github:cachix/devenv/latest";
-
+    hyprland.url = "github:hyprwm/Hyprland";
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
-  outputs = { nixpkgs, home-manager, devenv, ...}@inputs:
+  outputs = { nixpkgs, home-manager, devenv, hyprland, ...}@inputs:
 
   let
     inherit (nixpkgs) lib;

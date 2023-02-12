@@ -6,6 +6,8 @@
     ./zsh
     ./tmux
     ./packages
+    ./hyprland
+    ./dunst
     ./alacritty
     ./nvim
     ./st

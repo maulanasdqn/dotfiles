@@ -3,6 +3,7 @@
 
   imports = [ 
     ./boot
+    ./hyprland
     ./xdg
     ./config
     ./xserver

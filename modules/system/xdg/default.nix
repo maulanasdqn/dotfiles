@@ -3,6 +3,9 @@
 
 {
   xdg = {
+    autostart = {
+      enable = true;
+    };
     portal = {
       enable = true;
       extraPortals = with pkgs; [
@@ -12,4 +15,6 @@
       #gtkUsePortal = true;
     };
   };
+
+  
 }
