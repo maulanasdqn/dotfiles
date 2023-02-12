@@ -26,7 +26,7 @@
     inherit (nixpkgs) lib;
     
     util = import ./lib {
-      inherit system pkgs home-manager lib hyprland inputs; overlays = (pkgs.overlays);
+      inherit system pkgs home-manager lib hyprland xdph; overlays = (pkgs.overlays);
     };
 
     inherit (util) user;
