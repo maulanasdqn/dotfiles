@@ -11,6 +11,6 @@
    nodePackages.live-server lsd pavucontrol
    nodePackages.prettier htop networkmanagerapplet
    bat insomnia tig dbeaver dwm-status figma-linux
-   obs-studio virt-manager dmenu brave
+   obs-studio virt-manager dmenu brave acpi tlp
  ];
 }
