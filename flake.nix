@@ -3,7 +3,7 @@
 
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-unstable";
-    devenv.url = "github:cachix/devenv";
+    devenv.url = "github:cachix/devenv/latest";
 
     home-manager = {
       url = "github:nix-community/home-manager";
