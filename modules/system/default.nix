@@ -6,7 +6,6 @@
     ./hyprland
     ./xdg
     ./config
-    ./xserver
     ./audio
     ./environtment
     ./hardware

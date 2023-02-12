@@ -1,5 +1,5 @@
-{ pkgs, home-manager, system, lib, overlays, ... }:
+{ pkgs, home-manager, system, lib, overlays, hyprland, ... }:
 rec {
   user = import ./user { inherit pkgs home-manager lib system overlays; };
-  host = import ./host { inherit system pkgs home-manager lib user; };
+  host = import ./host { inherit system pkgs home-manager lib user hyprland; };
 }
