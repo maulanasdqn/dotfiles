@@ -3,7 +3,6 @@
 
   imports = [ 
     ./boot
-    ./hyprland
     ./xdg
     ./config
     ./audio

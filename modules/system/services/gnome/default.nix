@@ -1,8 +1,8 @@
-{ config, lib, pkgs, ... }:
+{ config, lib, pkgs, services, ... }:
 with services;
 
 {
-  gnome = {
+  services.gnome = {
     gnome-keyring.enable = true;
     core-utilities.enable = false;
   };

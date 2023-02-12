@@ -1,10 +1,10 @@
 
-{ config, lib, pkgs, ... }:
+{ config, lib, pkgs, services, ... }:
 
 with services;
 
 {
-  actkbd = {
+  services.actkbd = {
     enable = true;
     bindings = [
       { 

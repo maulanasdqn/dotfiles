@@ -1,9 +1,9 @@
-{ config, pkgs, lib, ...}:
+{ config, pkgs, lib, services, ...}:
 
 with services;
 
 {
-    xserver = {
+    services.xserver = {
       enable = true;
       windowManager = {
         #dwm.enable = true;

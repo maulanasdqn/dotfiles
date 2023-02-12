@@ -1,9 +1,9 @@
-{ config, lib, pkgs, ... }:
+{ config, lib, pkgs, services, ... }:
 
 with services;
 
 {
-  dwm-status = {
+  services.dwm-status = {
     enable = true;
     order = ["battery" "backlight" "audio" "time"];
   };

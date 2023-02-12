@@ -5,8 +5,8 @@
     ./git
     ./zsh
     ./tmux
-    ./packages
     ./hyprland
+    ./packages
     ./dunst
     ./alacritty
     ./nvim

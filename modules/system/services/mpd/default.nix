@@ -1,9 +1,9 @@
-{ config, lib, pkgs, ... }:
+{ config, lib, pkgs, services, ... }:
 
 with services;
 
 {
-  mpd = {
+  services.mpd = {
     enable = true;
     extraConfig = ''
       audio_output {

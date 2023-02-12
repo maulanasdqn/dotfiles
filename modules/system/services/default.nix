@@ -7,7 +7,6 @@
     ./dwm-status
     ./gnome
     ./mpd
-    ./wayland
     ./xserver
   ];
 
