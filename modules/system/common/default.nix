@@ -10,7 +10,7 @@
       enable = true;
       allowReboot = true;
     };
-    stateVersion = "21.11";
+    stateVersion = "23.05";
   };
   
   i18n.defaultLocale = "en_US.UTF-8";
@@ -20,9 +20,9 @@
     keyMap = "us";
   };
    
-   nixpkgs.config.permittedInsecurePackages = [
-     "xen-4.10.4"
-   ];
+  nixpkgs.config.permittedInsecurePackages = [
+    "xen-4.10.4"
+  ];
   
   programs = {
     mtr = {

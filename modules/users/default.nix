@@ -4,6 +4,7 @@
   imports = [
     ./git
     ./wofi
+    ./waybar
     ./zsh
     ./tmux
     ./hyprland
