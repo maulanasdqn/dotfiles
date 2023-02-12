@@ -1,4 +1,4 @@
-{ system, pkgs, home-manager, lib, user, hyprland, ... }:
+{ system, pkgs, home-manager, lib, user, hyprland, inputs, ... }:
 with builtins;
 {
   mkHost = { name, initrdMods, kernelMods, kernelPackage,
@@ -21,8 +21,8 @@ with builtins;
       {
         imports = [ ../../modules/system ] ++ sys_users;
 
-        xdg-desktop-portal-hyprland = inputs.xdph.packages.${prev.system}.default.override {
-          hyprland-share-picker = inputs.xdph.packages.${prev.system}.hyprland-share-picker.override {inherit hyprland;};
+        xdg-desktop-portal-hyprland = inputs.xdph.packages.${system}.default.override {
+          hyprland-share-picker = inputs.xdph.packages.${system}.hyprland-share-picker.override {inherit hyprland;};
         };
        
         environment.etc = {

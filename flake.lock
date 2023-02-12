@@ -138,6 +138,26 @@
         "type": "github"
       }
     },
+    "hyprland-protocols_2": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1673631087,
+        "narHash": "sha256-gkLgUg9/fP04bKCJMj/rN0r6PV/cbLShDvKQyFvVap0=",
+        "owner": "hyprwm",
+        "repo": "hyprland-protocols",
+        "rev": "eb7dcc0132ad25addc3e8d434c4bfae6bd3a8c90",
+        "type": "github"
+      },
+      "original": {
+        "owner": "hyprwm",
+        "repo": "hyprland-protocols",
+        "type": "github"
+      }
+    },
     "lowdown-src": {
       "flake": false,
       "locked": {
@@ -290,7 +310,9 @@
         "devenv": "devenv",
         "home-manager": "home-manager",
         "hyprland": "hyprland",
-        "nixpkgs": "nixpkgs_3"
+        "hyprland-protocols": "hyprland-protocols_2",
+        "nixpkgs": "nixpkgs_3",
+        "xdph": "xdph_2"
       }
     },
     "utils": {
@@ -343,6 +365,29 @@
         "owner": "hyprwm",
         "repo": "xdg-desktop-portal-hyprland",
         "rev": "d479c846531fd0e1d2357c9588b8310a2b859ef2",
+        "type": "github"
+      },
+      "original": {
+        "owner": "hyprwm",
+        "repo": "xdg-desktop-portal-hyprland",
+        "type": "github"
+      }
+    },
+    "xdph_2": {
+      "inputs": {
+        "hyprland-protocols": [
+          "hyprland-protocols"
+        ],
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1676131170,
+        "narHash": "sha256-K2KLGfUHbasZQCeXTRIZMYcEEnW2exBXvJiXRmJZibM=",
+        "owner": "hyprwm",
+        "repo": "xdg-desktop-portal-hyprland",
+        "rev": "2fa7e345a4131fb9bddb5dc168475613c0684cf5",
         "type": "github"
       },
       "original": {

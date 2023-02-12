@@ -5,19 +5,28 @@
     nixpkgs.url = "nixpkgs/nixos-unstable";
     devenv.url = "github:cachix/devenv/latest";
     hyprland.url = "github:hyprwm/Hyprland";
+    hyprland-protocols = {
+      url = "github:hyprwm/hyprland-protocols";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    xdph = {
+      url = "github:hyprwm/xdg-desktop-portal-hyprland";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.hyprland-protocols.follows = "hyprland-protocols";
+    };
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
-  outputs = { nixpkgs, home-manager, devenv, hyprland, ...}@inputs:
+  outputs = { nixpkgs, home-manager, devenv, hyprland, xdph, ...}@inputs:
 
   let
     inherit (nixpkgs) lib;
     
     util = import ./lib {
-      inherit system pkgs home-manager lib hyprland; overlays = (pkgs.overlays);
+      inherit system pkgs home-manager lib hyprland inputs; overlays = (pkgs.overlays);
     };
 
     inherit (util) user;
@@ -50,5 +59,9 @@
         cpuCores = 8;
       };
     };
+  };
+  nixConfig = {
+   extra-substituters = ["https://hyprland.cachix.org"];
+   extra-trusted-public-keys = ["hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="];
   };
 }
