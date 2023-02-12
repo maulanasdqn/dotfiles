@@ -1,6 +1,10 @@
 { system, pkgs, home-manager, lib, user, hyprland, xdph, ... }:
 with builtins;
 {
+  xdg-desktop-portal-hyprland = xdph.packages.${system}.default.override {
+    hyprland-share-picker = xdph.packages.${system}.hyprland-share-picker.override {inherit hyprland;};
+  };
+
   mkHost = { name, initrdMods, kernelMods, kernelPackage,
     cpuCores, users ? []
   }:
@@ -21,10 +25,6 @@ with builtins;
       {
         imports = [ ../../modules/system ] ++ sys_users;
 
-        xdg-desktop-portal-hyprland = xdph.packages.${system}.default.override {
-          hyprland-share-picker = xdph.packages.${system}.hyprland-share-picker.override {inherit hyprland;};
-        };
-       
         environment.etc = {
           "hmsystemdata.json".text = toJSON userCfg;
         };
@@ -48,7 +48,8 @@ with builtins;
       home-manager.nixosModules.home-manager  {
         home-manager.useGlobalPkgs = true;
         home-manager.useUserPackages = true;
-        home-manager.users.ms = {config, pkgs, lib, ...}: {
+        home-manager.users.ms = {config, pkgs, lib, xdph, hyprland, inputs, ...}: {
+          
           imports = [
             ../../modules/users
           ];

@@ -3,6 +3,7 @@
 {
   imports = [
     ./git
+    ./wofi
     ./zsh
     ./tmux
     ./hyprland
