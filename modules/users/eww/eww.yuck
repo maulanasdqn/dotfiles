@@ -64,11 +64,14 @@
 ;; ━━━ WIDGETS ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 ;; ━━━ MEMORY ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
 (defwidget dashbutton[]
   (button :class "reg-btn dashbutton" :onclick "eww open dashboard --toggle" "舘")
 )
 
-
+(defwidget screenshot[]
+  (button :class "reg-btn dashbutton" :onclick "grimshot --notify copy area" "")
+)
 
 ;; ━━━ MEMORY ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 (defwidget mem [icon thickness]
@@ -111,7 +114,6 @@
 
 
 ;; ━━━ WIFI ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-(defvar wifi "{}")
 (defpoll wifi :interval "30s" "./scripts/wifi.sh")
 
 (defwidget wifi []
@@ -125,7 +127,6 @@
 )
 
 ;; ━━━ BATTERY ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-(defvar battery "{}")
 (defpoll battery :interval "60s" "./scripts/battery.sh")
 
 (defwidget battery []

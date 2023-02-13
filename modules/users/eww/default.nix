@@ -7,7 +7,7 @@ with lib;
       eww-wayland
       pamixer
       brightnessctl
-      (nerdfonts.override { fonts = [ "Hack Nerd Font Mono" ]; })
+      gdk-pixbuf
   ];
 
   home.file.".config/eww/eww.scss".source = ./eww.scss;

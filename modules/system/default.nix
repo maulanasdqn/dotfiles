@@ -5,6 +5,7 @@
     ./boot
     ./xdg
     ./config
+    ./hyprland
     ./audio
     ./environtment
     ./hardware
