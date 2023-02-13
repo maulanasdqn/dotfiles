@@ -13,7 +13,7 @@
     DIRENV_LOG_FORMAT = "";
     ANKI_WAYLAND = "1";
     DISABLE_QT5_COMPAT = "0";
-    GDK_SCALE=2;
-    XCURSOR_SIZE=48;
+    #GDK_SCALE=2;
+    #XCURSOR_SIZE=48;
   };
 }
