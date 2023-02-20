@@ -5,6 +5,7 @@
     nixpkgs.url = "nixpkgs/nixos-unstable";
     devenv.url = "github:cachix/devenv/latest";
     hyprland.url = "github:hyprwm/Hyprland";
+    xremap-flake.url = "github:xremap/nix-flake";
     hyprland-protocols = {
       url = "github:hyprwm/hyprland-protocols";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -20,13 +21,13 @@
     };
   };
 
-  outputs = { nixpkgs, home-manager, devenv, hyprland, xdph, ...}@inputs:
+  outputs = { nixpkgs, home-manager, devenv, hyprland, xdph, xremap-flake, ...}@inputs:
 
   let
     inherit (nixpkgs) lib;
     
     util = import ./lib {
-      inherit system pkgs home-manager lib hyprland xdph; overlays = (pkgs.overlays);
+      inherit system pkgs home-manager lib hyprland xdph xremap-flake; overlays = (pkgs.overlays);
     };
 
     inherit (util) user;

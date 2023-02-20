@@ -3,7 +3,7 @@
  home.packages = with pkgs; [
    google-chrome flameshot zig zoom-us
    fd jq git-crypt nitrogen postman inkscape
-   neofetch lazygit slack nestopia rofi
+   neofetch lazygit slack nestopia rofi discord
    alsa-utils python3 scrcpy exa pcmanfm
    ripgrep android-tools unzip unrar wget
    nodePackages.yarn picom-next tdesktop

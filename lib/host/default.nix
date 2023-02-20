@@ -1,4 +1,4 @@
-{ system, pkgs, home-manager, lib, user, hyprland, xdph, ... }:
+{ system, pkgs, home-manager, lib, user, hyprland, xdph, xremap-flake, ... }:
 with builtins;
 {
   xdg-desktop-portal-hyprland = xdph.packages.${system}.default.override {
@@ -22,6 +22,7 @@ with builtins;
 
     modules = [
       hyprland.nixosModules.default
+      xremap-flake.nixosModules.default
       {
         imports = [ ../../modules/system ] ++ sys_users;
 
