@@ -1,8 +1,8 @@
 #!/bin/sh
 
-if iwctl station wlan0 show | grep -q "connected"; then
+if iwctl station wlp2s0 show | grep -q "connected"; then
     icon=""
-    ssid=Amadeus
+    ssid=Unicorn
     status="Connected to ${ssid}"
 else
     icon="睊"

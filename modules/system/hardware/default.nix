@@ -7,19 +7,19 @@
 
   boot.blacklistedKernelModules = [ "nouveau" ];
 
-  fileSystems."/" = { device = "/dev/disk/by-uuid/1fb10a47-7121-4f0d-8b58-7f4227d1e23c";
-    fsType = "xfs";
-  };
+   fileSystems."/" =
+    { device = "/dev/disk/by-uuid/ffc19814-8c1f-44b5-8a4e-c0c4cb722f25";
+      fsType = "f2fs";
+    };
 
-  fileSystems."/boot" = { device = "/dev/disk/by-uuid/D55F-2EBF";
-    fsType = "vfat";
-  };
+  fileSystems."/boot" =
+    { device = "/dev/disk/by-uuid/4250-24FA";
+      fsType = "vfat";
+    };
 
-  swapDevices = [
-    {
-      device = "/dev/disk/by-uuid/7ac225c1-7db2-4fe5-a4c7-115f61b8d0f0";
-    }
-  ];
+  swapDevices =
+    [ { device = "/dev/disk/by-uuid/ad94b71a-f1f6-4182-bd0d-f23bcb0ce872"; }
+    ];
 
   powerManagement.cpuFreqGovernor = lib.mkDefault "powersave";
   hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;

@@ -5,7 +5,6 @@
     ./actkbd
     ./greetd
     ./common
-    ./xremap
     ./dwm-status
     ./gnome
     ./mpd

@@ -40,7 +40,7 @@ nvim_lsp.eslint.setup{
 
 nvim_lsp.rnix.setup{}
 
-nvim_lsp.sumneko_lua.setup{}
+nvim_lsp.lua_ls.setup{}
 
 
 local signs = { Error = " ", Warn = " ", Hint = " ", Info = " " }

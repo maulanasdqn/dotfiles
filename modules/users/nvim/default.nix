@@ -6,10 +6,12 @@
     home.packages = with pkgs; [
       rnix-lsp nixfmt ripgrep
       fd starship
-      sumneko-lua-language-server stylua
+      stylua luajitPackages.lua-lsp
       nodePackages.typescript-language-server
       nodePackages.pyright
     ];
+
+    home.file.".config/nvim/settings.lua".source = ./lua/settings.lua;
 
     programs.neovim = {
       enable = true;
@@ -29,6 +31,8 @@
         plenary-nvim
         cmp-nvim-lsp
         kanagawa-nvim
+        nvim-web-devicons
+        
 
         {
           plugin = lualine-nvim;
@@ -95,10 +99,12 @@
         }
       ];
 
-	    extraConfig = ''
+      extraConfig = ''
         luafile ~/.config/dotfiles/modules/users/nvim/lua/settings.lua
+        luafile ~/.config/nvim/settings.lua
         luafile ~/.config/dotfiles/modules/users/nvim/lua/maps.lua
       '';
+
     };
   };
 }
