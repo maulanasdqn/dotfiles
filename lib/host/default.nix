@@ -50,7 +50,6 @@ with builtins;
         home-manager.useGlobalPkgs = true;
         home-manager.useUserPackages = true;
         home-manager.users.ms = {config, pkgs, lib, xdph, hyprland, inputs, ...}: {
-          
           imports = [
             ../../modules/users
           ];

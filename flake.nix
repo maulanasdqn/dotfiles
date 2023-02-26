@@ -44,7 +44,6 @@
     system = "x86_64-linux";
 
   in {
-    pkgs = [devenv.packages.x86_64-linux.devenv];
     nixosConfigurations = {
       beast = host.mkHost {
         name = "beast";
