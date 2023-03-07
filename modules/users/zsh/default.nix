@@ -16,6 +16,7 @@
       export PATH=~/.grader/bin:$PATH
       export NODE_PATH=~/.npm-packages/lib/node_modules
       source ~/.config/z/z.sh
+      eval "$(starship init zsh)"
     '';
     shellAliases = {
       update = "sudo nix flake update ~/.config/dotfiles";
