@@ -1,17 +1,18 @@
 { config, pkgs, ... }:
+
 {
  home.packages = with pkgs; [
-   google-chrome flameshot zig zoom-us
+   google-chrome zig zoom-us
    fd jq git-crypt nitrogen postman inkscape
-   neofetch lazygit slack nestopia rofi discord
-   alsa-utils python3 scrcpy exa pcmanfm
+   neofetch lazygit slack nestopia
+   alsa-utils pcmanfm
    ripgrep android-tools unzip unrar wget
-   nodePackages.yarn picom-next tdesktop
-   nodePackages.typescript spotify cbatticon
-   nodePackages.live-server lsd pavucontrol
-   nodePackages.prettier htop networkmanagerapplet
-   bat insomnia tig dbeaver dwm-status figma-linux
+   tdesktop
+   spotify
+   lsd pavucontrol
+   htop networkmanagerapplet
+   bat insomnia tig dbeaver
    obs-studio virt-manager dmenu brave acpi tlp
-   firefox-wayland sway-contrib.grimshot luajit
+   sway-contrib.grimshot luajit
  ];
 }
