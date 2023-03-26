@@ -1,0 +1,34 @@
+order = ["battery", "backlight", "audio" ,"time"]
+separator = " < "
+
+[audio]
+mute = "ﱝ"
+template = "{ICO} {VOL}%"
+icons = ["奄", "奔", "墳"]
+
+[backlight]
+device = "intel_backlight"
+template = "{ICO} {BL}%"
+icons = ["", "", ""]
+
+[battery]
+charging = ""
+discharging = ""
+enable_notifier = true
+no_battery = ""
+notifier_critical = 10
+notifier_levels = [2, 5, 10, 15, 20]
+separator = "·"
+icons = ["", "", "", "", "", "", "", "", "", "", ""]
+
+[cpu_load]
+template = "{CL1} {CL5} {CL15}"
+update_interval = 20
+
+[network]
+no_value = "NA"
+template = "{IPv4} · {IPv6} · {ESSID}"
+
+[time]
+format = "%Y-%m-%d %H:%M"
+update_seconds = false
