@@ -39,6 +39,8 @@
         nvim-web-devicons
         neoformat
         vim-floaterm
+        papercolor-theme
+        NeoSolarized
 
         {
           plugin = lualine-nvim;
