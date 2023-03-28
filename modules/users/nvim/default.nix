@@ -25,7 +25,6 @@
       withPython3 = true;
       withRuby = true;
       defaultEditor = true;
-
       plugins = with pkgs.vimPlugins; [
         vim-nix
         cmp-git
@@ -46,6 +45,13 @@
           plugin = lualine-nvim;
           config = ''
             luafile ~/.config/dotfiles/modules/users/nvim/lua/config/lualine.lua
+          '';
+        }
+
+        {
+          plugin = neogit;
+          config = ''
+            luafile ~/.config/dotfiles/modules/users/nvim/lua/config/neogit.lua
           '';
         }
 

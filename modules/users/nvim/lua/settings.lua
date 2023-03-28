@@ -2,7 +2,7 @@ local o = vim.opt
 local wo = vim.wo
 local fn = vim.fn
 
-vim.cmd("colorscheme NeoSolarized")
+vim.cmd("colorscheme kanagawa")
 vim.cmd("set background=dark")
 vim.cmd("au InsertEnter * set nornu")
 vim.cmd("au InsertLeave * set rnu")

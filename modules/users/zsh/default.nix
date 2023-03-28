@@ -1,6 +1,4 @@
-
-{ config, ... }:
-{
+{ config, ... }: {
   programs.zsh = {
     enable = true;
     enableCompletion = true;
@@ -21,7 +19,8 @@
     '';
     shellAliases = {
       update = "sudo nix flake update ~/.config/dotfiles";
-      build = "sudo nixos-rebuild switch -p nix --flake ~/.config/dotfiles/#beast";
+      build =
+        "sudo nixos-rebuild switch -p nix --flake ~/.config/dotfiles/#beast";
       clean = "sudo nix-collect-garbage -d";
       ls = "lsd";
       lsa = "lsd -a";
